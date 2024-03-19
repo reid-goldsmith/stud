@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}" />
+</head>
+<body>
+
+
+
+<form method="post">
+    <p>What is your degree?</p>
+    <select name="degree_list">
+      <option value="{{degree_list[0]}}" selected>{{degree_list[0]}}</option>
+      {% for degree in degree_list[1:] %}
+        <option value="{{degree}}">{{degree}}</option>
+      {% endfor %}
+    </select>
+
+    <p><br>Do you have knowledge about Reinforcement Learning of any kind?</p>
+    </br>No, I have no knowledge of RL &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="options" id="0" value="0"> 0 &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options" id="1" value="1"> 1  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options" id="2" value="2"> 2  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options" id="3" value="3"> 3  &nbsp;&nbsp;&nbsp;</input>
+    Yes, I'm an expert in RL<br><br>
+    <input type="submit" name="options" >
+</form>
+
+</body>
+</html>

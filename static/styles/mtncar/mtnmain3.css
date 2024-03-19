@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+}
+.ima{
+    width:400px;
+    height:400px;
+}
+.ima2{
+    width:500px;
+    height:400px;
+}
+
+.grid-container {
+
+  display: grid;
+
+
+}
+
+.grid1{
+    text-align: center;
+    grid-column: 1 / span 3;
+    text-align: center;
+    grid-row: 1 / span 3;
+}
+.grid2{
+    grid-column: 3 / span 3;
+    text-align: center;
+    grid-row: 1 / span 3;
+}
+.grid3{
+    grid-column: 1 / span 5;
+    text-align: center;
+    grid-row: 4 / span 3;
+
+}
+.ag{
+    text-align: center;
+}
+.desc{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom-width: 2px;
+    border-bottom-color: black;
+    border-bottom-style:solid;
+}
+

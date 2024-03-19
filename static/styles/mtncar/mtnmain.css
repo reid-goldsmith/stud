@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+}
+h2{
+    color: gray;
+}
+h3{
+    color:black;
+    inline-size: 100%;
+}
+.fcc-btn {
+  background-color: black;
+  color: white;
+}
+.ima{
+    width:500px;
+    height:400px;
+}
+
+.grid-container {
+  display: grid;
+
+}
+.grid-item{
+    grid-column: 4 / span 3;
+    text-align: center;
+    grid-row: 1 / span 3;
+}
+
+.grid-item2{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+    text-align: center;
+    width: 500px;
+}
+.grid-item3{
+    grid-column: 2 / span 6;
+    grid-row: 5 / span 6;
+    text-align: center;
+}
+
+.ima2{
+    width: 50%;
+        height: 50%;
+    }

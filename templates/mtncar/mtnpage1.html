@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mountain Car</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/mtncar/mtnmain.css') }}" />
+</head>
+<body>
+    <div class="grid-container">
+        <p class="grid-item">{{ figurename }}<br>
+        <img class="ima" src="{{ url_for('static', filename='images/mtncar/mountaincar.jpg') }}">
+         </p>
+         <p class="grid-item2"><br><br><br><b>Problem Description</b><br>
+            The figure on the right is the Mountain Car environment. A car starts <b>at the bottom</b> of a valley, and must build up enough speed / momentum by <b>moving back and 
+            forth</b> to reach the top of the hill on the right. The car has 3 actions, either accelerate left, accelerate right, or choose to not accelerate. 
+            The state space consists of two continuous features, car position, car velocity. 
+
+
+        </p>   <form method="post" class="grid-item3">
+               <br><br>How confident are you in understanding this environment?</br> By saying confident, it
+                   means you are confident that there should be a route by which the agent will reach its target
+                   as soon as possible.</p>
+            </br>Not sure &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="options2" id="0" value="0"> 0 &nbsp;&nbsp;&nbsp;</input>
+            <input type="radio" name="options2" id="1" value="1"> 1  &nbsp;&nbsp;&nbsp;</input>
+            <input type="radio" name="options2" id="2" value="2"> 2  &nbsp;&nbsp;&nbsp;</input>
+            <input type="radio" name="options2" id="3" value="3"> 3  &nbsp;&nbsp;&nbsp;</input>
+            Certain<br><br>
+            <input type="submit" name="options2" >
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %} 
+<p class="grid-item2"><br><br><br><b>Problem Description</b><br>
+    The figure on the right is a simple gridworld problem where the agent has to navigate from the <b>bottom left</b> to the <b>top right</b>
+       (target) while evading traps, monsters, and a forest. The agent will be terminated when in a tile with a
+       trap or adjacent to the monster, and will be penalized when going into a forest. <br>This task is failed
+    when the agent is <b>terminated</b> or when the agent cannot reach the target in 20 steps. The agent can act in
+       four ways: left, right, up, down and the agent needs to reach the target as quickly as possible.
+       This graph is also labeled with a human-understandable description about the different regions of the
+       graph at which an agent possibly can be located.
+</p>   <form method="post" class="grid-item3">
+       <br><br>How confident are you in understanding this environment?</br> By saying confident, it
+           means you are confident that there should be a route by which the agent will reach its target
+           as soon as possible.</p>
+    </br>Not sure &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="options2" id="0" value="0"> 0 &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="1" value="1"> 1  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="2" value="2"> 2  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="3" value="3"> 3  &nbsp;&nbsp;&nbsp;</input>
+    Certain<br><br>
+    <input type="submit" name="options2" >
+</form>
+{% endblock %}

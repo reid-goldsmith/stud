@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main3.css') }}"/>
+</head>
+<body>
+<div class="grid-container">
+    <p class="grid1">Figure 1<br>
+        <img class="ima" src="{{ url_for('static', filename='images/' + ims) }}" alt="grid">
+    </p>
+
+    <p class="grid2">Figure 2<br>
+        <img class="ima" src="{{ url_for('static', filename='images/' + ims2) }}" alt="path">
+    </p>
+    <form method="post" class="grid3">
+        <p class="desc">Figure 2 is the behavior of the agent based on your choice of starting location and initial
+            action (labeled yellow), we show how your choice will impact the FP and TS by using an arrow.
+            An “early termination” would indicates the expected time step to finish will be infinite.</p>
+        <p><br>According to figure 2, do you think this path is
+            part of agent's optimal strategy?</p>
+        <br>&nbsp;&nbsp;
+        <script type="text/javascript">
+            function ShowHideDiv() {
+                var chkYes = document.getElementById("No");
+                var dvPassport = document.getElementById("ifno");
+                dvPassport.style.display = chkYes.checked ? "block" : "none";
+            }
+        </script>
+        <input type="radio" name="options" id="Yes" value="Yes"onclick="ShowHideDiv()"> Yes &nbsp;&nbsp;&nbsp;</input>
+        <input type="radio" name="options" id="No" value="No"onclick="ShowHideDiv()"> No &nbsp;&nbsp;&nbsp;</input>
+        <br><br>
+        <div id="ifno" style="display: none">
+            <p>If your answer is "No", why do you think this is not the best action at this particular location?<br></p>
+            <input type="radio" name="options2" id="Yes" value="failure increases"> The failure probability of agent increases &nbsp;&nbsp;&nbsp;</input><br>
+            <input type="radio" name="options2" id="No" value="failure decreases"> The failure probability of agent decreases &nbsp;&nbsp;&nbsp;</input><br>
+            <input type="radio" name="options2" id="Yes" value="time increases"> The expected timestep to finish increases &nbsp;&nbsp;&nbsp;</input><br>
+            <input type="radio" name="options2" id="No" value="time decreases"> The expected timestep to finish decreases &nbsp;&nbsp;&nbsp;</input><br>
+
+        </div>
+        <input type="submit" name="options">
+    </form>
+</div>
+</body>
+</html>

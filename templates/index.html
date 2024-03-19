@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block styles %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}" />
+    {% endblock %}
+    <title>Title</title>
+</head>
+<body>
+<h1>Welcome</h1>
+<p>(Desktop Only)</p>
+<h3><br><br>We are investigating whether summarizing the reinforcement learning agent’s behavior using English affects the end user's understanding and trusting that agent. 
+    In this study, you will play an interactive computer game with the reinforcement learning agent then complete several questionnaires to measure your understanding of the agent’s behavior. You will do this two times.
+    You will enter a poll for 3 Amazon gift cards of $25 upon completing the experiment!<br><br><br><br></h3>
+<form method="post">
+    <label for="email">Enter your email:</label>
+    <input type="email" id="email" name="email">
+    <input type="submit" name="email">
+</form>
+<img class="ima2" src="{{ url_for('static', filename='images/img.png') }}" alt="President portrait">
+
+</body>
+</html>

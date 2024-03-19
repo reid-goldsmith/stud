@@ -1,0 +1,29 @@
+{% extends 'base2.html' %}
+{% block content %}
+    <p class="grid-item">{{ figurename }}<br>
+    <img class="ima" src="{{ url_for('static', filename='images/' + ims) }}" alt="Grid">
+</p>
+<form class="grid-item3" method="post">
+  
+<h2>Exploration</h2>
+    <p>Now that you have the opportunity to explore the environment by placing the agent at any position and control the agent for the next action. <br>You have 3 chances to do that.</p>
+    What if the agent moves from
+    <select name="state">
+      <option value="{{state[0]}}" selected>{{state[0]}}</option>
+      {% for s in state[1:] %}
+        <option value="{{s}}">{{s}}</option>
+      {% endfor %}
+    </select>
+towards
+    <select name="directions">
+      <option value="{{directions[0]}}" selected>{{directions[0]}}</option>
+      {% for direction in directions[1:] %}
+        <option value="{{direction}}">{{direction}}</option>
+      {% endfor %}
+    </select>
+
+
+    <input type="submit" name="state" >
+</form>
+
+{% endblock %}

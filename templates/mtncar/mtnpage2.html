@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/mtncar/mtnmain3.css') }}" />
+</head>
+<body>
+<div class="grid-container">
+          <p class="grid1">Figure 1<br>
+        <img class="ima2" src="{{ url_for('static', filename='images/mtncar/' + ims) }}" alt="grid">
+         </p>
+
+        <p class="grid2">Figure 2<br>
+        <img class="ima" src="{{ url_for('static', filename='images/mtncar/' + ims2) }}" alt="path">
+         </p>
+
+    <form method="post" class="grid3">
+    <p class="desc">Here we presented you two graphs, Figure 1 is the environment that the agent will interact with, and Figure 2 is the graph that demonstrates the BEST strategy the agent will adopt. 
+        Each node corresponds to a region of the map, and the edge connecting each node represents an action the agent will take with its probability. 
+        <br><br>FP: stands for “failure probability”, representing the estimated chance the agent will lose the game by following this action.
+        <br><br>TS: stands for “timestep”, representing the estimated steps the agent will finish the game assuming successful.<br><br>
+        </p>
+
+       <br><br>How many steps do you expect the agent to finish the game from start to the target?</p>
+    <input type="radio" name="options2" id="94" value="94"> 94 &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="66" value="66"> 66  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="47" value="47"> 47 &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options2" id="23" value="23"> 23  &nbsp;&nbsp;&nbsp;</input>
+    <br>
+        <br><br>What is the estimated failure probability for the agent at the start?</p>
+    <input type="radio" name="options3" id="100%" value="100%"> 100% &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options3" id="80%" value="80%"> 80%  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options3" id="60%" value="60%"> 60%  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options3" id="0%" value="0%"> 0% &nbsp;&nbsp;&nbsp;</input>
+    <br>
+        <br><br>When the agent is “On the right slope and Moving right quickly”, what action do you expect the agent to take?</p>
+    <input type="radio" name="options4" id="Accelerate Right" value="Accelerate Right"> Accelerate Right &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options4" id="Accelerate Left" value="Accelerate Left"> Accelerate Left  &nbsp;&nbsp;&nbsp;</input>
+    <input type="radio" name="options4" id=" Not Accelerate" value=" Not Accelerate"> Not Accelerate  &nbsp;&nbsp;&nbsp;</input>
+    <br><br>
+    <input type="submit" name="options2" >
+</form>
+    </div>
+</body>
